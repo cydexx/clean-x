@@ -1,0 +1,13 @@
+{
+	"manifest_version": 3,
+	"name": "Clean-X",
+	"version": "1.0",
+	"description": "Clean up Twitter (X) interface by removing unwanted elements",
+	"permissions": ["activeTab"],
+	"content_scripts": [
+		{
+			"matches": ["https://x.com/*", "https://twitter.com/*"],
+			"js": ["content.js"]
+		}
+	]
+}
