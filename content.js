@@ -8,10 +8,20 @@ function cleanX() {
 	}
 
 	// Remove elements from the left side nav
-	const navItemsToRemove = ["Grok", "Jobs", "Premium", "Business"]
+	const navItemsToRemove = [
+		"Grok",
+		"Jobs",
+		"Premium",
+		"Business",
+		"Lists",
+		"Communities",
+		"Verified Orgs",
+	]
 
 	// Updated selector to target the left side navigation items
-	const navItems = document.querySelectorAll('nav[aria-label="Primary"] a')
+	const navItems = document.querySelectorAll(
+		'nav[aria-label="Primary"] a, nav[aria-label="Primary"] button'
+	)
 	navItems.forEach((item) => {
 		const itemText = item.textContent.trim()
 		if (navItemsToRemove.includes(itemText)) {
